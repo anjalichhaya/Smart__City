@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-image: linear-gradient(to right, rgba(0,155,700,0), rgba(,0,500,700));
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+ header {
+            
+            text-align:center;
+            padding: 168px 0;
+            width:900;
+            height:345;
+            background-image:url("https://newsroom.cisco.com/c/dam/r/newsroom/en/us/migrated-assets/smart-city-trans-feature_800x450_thumb_012320-animated-gif-2046987-1-0.gif");
+            
+             }
+nav {
+            background-color: #333;
+            color: #fff;
+            text-align: right;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 20px;
+            
+        }
+    </style>
+</head>
+
+<body>
+<header>
+        <h1 style="font-size:45px;" >SMART CITY</h1>
+      
+    </header>
+<nav>
+        
+      <a href="index.html">Home<a>
+      <a href="about.html">About<a>
+      <a href="feedback.html">Feedback<a>
+   
+      
+        
+        
+    </nav>
+
+
+    <h1>Feedback Form</h1>
+
+    <form id="feedbackForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+        <button type="button" onclick="submitFeedback()">Submit Feedback</button>
+    </form>
+
+    <script>
+        function submitFeedback() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var feedback = document.getElementById('feedback').value;
+
+            // You can customize this part to send feedback to a server or store it in a database
+            // For simplicity, we will just display an alert with the feedback
+            alert("Feedback submitted!\n\nName: " + name + "\nEmail: " + email + "\nFeedback: " + feedback);
+
+            // You may want to reset the form after submission
+            document.getElementById('feedbackForm').reset();
+        }
+    </script>
+
+</body>
+</html>
